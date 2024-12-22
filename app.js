@@ -23,7 +23,7 @@ const nav = [
 headerElUl.innerHTML = 
 
     nav.map((element) => {
-        return `<li class="header-element"><a class="header-element-link">${element.item}</a></li>`
+        return `<li class="header-element"><a href='#' class="header-element-link">${element.item}</a></li>`
     }).join("")
 
 let n;
