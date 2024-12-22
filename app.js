@@ -92,17 +92,24 @@ function pagination(navigation = []){
     })
 }    
 
-
 let array = []
 let cardList = []
 
 function addToFav(fav, images){
 
-    array.push(fav)
-    cardList.push(images)
+    const image = images.filter((image, id) => id == fav || id == Number(fav));
 
-    localStorage.setItem("favorite", JSON.stringify(array))
-    localStorage.setItem("array", JSON.stringify(cardList))
+    if(image){
+        array.push(Number(fav))
+        cardList = image
+
+        localStorage.setItem("favorite", JSON.stringify(array))
+        localStorage.setItem("array", JSON.stringify(cardList))
+        console.log(cardList)
+    
+    }else{
+        console.error(fav)
+    }
 
     return array
 }
@@ -133,7 +140,6 @@ function render(images = []){
     cardCollageUl.addEventListener("click", (e) => {
         if(e.target.closest(".card-1_btn")){
             const card = e.target.closest(".card-collage_el")
-
             const cardId = card.getAttribute("data-page")
             console.log(addToFav(cardId, images))
         }

@@ -20,6 +20,19 @@ const nav = [
     },
 ]
 
+async function startFav(){
+    favoriteCardsUl.innerHTML = 'Loading....'
+    try{
+        setTimeout(() => {
+            renderFav()
+        }, 1000);
+    }catch(err){
+        favoriteCardsUl.innerHTML = err.message
+    }
+}
+
+startFav()
+
 const fakeApi = [
     {
         imageUrl: "askdjkljsdf",
@@ -66,6 +79,8 @@ function renderFav(){
 
     const favoriteImages = fullCards.filter((images, id) => fav !== fav.includes(String(images))) 
 
+    console.log(favoriteImages.map(element => element))
+
     const html = favoriteImages.map(function(element, id){
         return `
             <li class="card-collage_el" data-page=${id}>
@@ -105,5 +120,3 @@ function renderFav(){
 
 
 }
-
-renderFav()
