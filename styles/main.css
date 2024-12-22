@@ -1,0 +1,201 @@
+@import "./fav.css";
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    }
+
+*::after, *::before {
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-width: 100vh;
+    font-family: Roboto;
+    font-size: 16px;
+    color: #fff;
+    background-color: #222;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+  
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+  
+.header {
+    width: 100%;
+    z-index: 50;
+    background-color: #000;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+}
+
+.header-ul{
+    display: flex;
+    column-gap: 40px;
+}
+
+.header-logo{
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.header-btn-block{
+    display: flex;
+    gap: 0 12px;
+    align-items: center;
+}
+
+.header-btn-favorites{
+    background-color: #fff;
+    padding: 17px;
+}
+
+.header-btn-favorites:hover{
+    cursor: pointer;
+}
+
+.header-element-link{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.card-collage-1_container{
+    padding: 80px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px 0px;
+}
+
+.card-collage_ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px 0;
+}
+
+.card-collage_el{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 16px;
+    color: #e0e0e0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card-collage_el:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-collage_img{
+    width: 100%;
+    height: auto;
+}
+
+.card-collage-desc{
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.card-collage_title{
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.card-collage-1_nav-btn{
+    width: 39px;
+    height: 39px;
+    border-radius: 50px; /* Делаем кнопку круглой */
+    border: none; /* Убираем рамки (опционально) */
+    background-color: #007bff; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    display: inline-flex; /* Чтобы текст центрировался */
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center; /* Центрируем содержимое */
+    font-size: 16px; /* Размер текста */
+    cursor: pointer; /* Указатель мыши */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.card-collage-1_nav-btn:hover{
+    color: #0056b3;
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.card-collage-1_ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-1_btn{
+    display: flex;
+    background: none;
+}
+
+.card-1_btn-favorite{
+    background-color: #fff;
+    padding: 12px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.card-1_btn-favorite:hover{
+    cursor: pointer;
+    background-color: #DD377D;
+}
+
+.card-collage_active-btn{
+    color: #0056b3;
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.favorite-btn-active{
+    background-color: #DD377D;
+}
